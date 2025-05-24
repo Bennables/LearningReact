@@ -7,9 +7,16 @@ import './App.css'
 
 //ALL items must have uppercase names
 const Comp = ({title}) =>{
+
+  const [Liked, setLiked] = useState(false);
+
+
+
+
   return(
     <div>
     <h2>{title}</h2>
+    <button onClick={()=>setLiked(!Liked)}>{Liked ? 'Liked' : "Like"}</button>
     </div>
   )
 }
